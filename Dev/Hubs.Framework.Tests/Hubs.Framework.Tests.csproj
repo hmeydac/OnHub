@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F40F5DF3-3474-4167-8C32-473AA9FE0B01}</ProjectGuid>
+    <ProjectGuid>{6F1153FA-EDA7-4FB3-91C7-8FE47C76834E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hubs.RSS.Tests</RootNamespace>
-    <AssemblyName>Hubs.RSS.Tests</AssemblyName>
+    <RootNamespace>Hubs.Framework.Tests</RootNamespace>
+    <AssemblyName>Hubs.Framework.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.1.1309.0919\lib\net40\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -53,23 +50,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AtomFeedTests.cs" />
-    <Compile Include="AtomReaderTests.cs" />
+    <Compile Include="FeedEntryTests.cs" />
+    <Compile Include="FeedTests.cs" />
+    <Compile Include="HubTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RssFeedTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hubs.Framework\Hubs.Framework.csproj">
-      <Project>{E164EC6A-DEEF-42F7-811B-83AE01AAF7E8}</Project>
+      <Project>{e164ec6a-deef-42f7-811b-83ae01aaf7e8}</Project>
       <Name>Hubs.Framework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Hubs.RSS\Hubs.RSS.csproj">
-      <Project>{11006CED-DE84-4B46-99EF-A589340E4E2D}</Project>
-      <Name>Hubs.RSS</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
