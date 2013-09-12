@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace OnHub.Web.Models
+﻿namespace OnHub.Web.Models
 {
+    using System.Collections.Generic;
+
     public class FeedViewModel
     {
         public string Name { get; set; }

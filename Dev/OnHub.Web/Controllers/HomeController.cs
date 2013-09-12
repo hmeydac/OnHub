@@ -1,28 +1,28 @@
-﻿using System.Web.Mvc;
-
-namespace OnHub.Web.Controllers
+﻿namespace OnHub.Web.Controllers
 {
+    using System.Web.Mvc;
+
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            return View();
+            return this.View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
 
-            return View();
+            return this.View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return this.View();
         }
     }
 }

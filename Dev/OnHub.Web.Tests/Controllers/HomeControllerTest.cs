@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OnHub.Web;
-using OnHub.Web.Controllers;
-
-namespace OnHub.Web.Tests.Controllers
+﻿namespace OnHub.Web.Tests.Controllers
 {
+    using System.Web.Mvc;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    using OnHub.Web.Controllers;
+
     [TestClass]
     public class HomeControllerTest
     {

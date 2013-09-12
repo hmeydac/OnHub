@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace OnHub.Web.Models
+﻿namespace OnHub.Web.Models
 {
+    using System;
+
     public class FeedEntryViewModel
     {
         public string Title { get; set; }
