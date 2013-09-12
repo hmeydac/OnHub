@@ -54,6 +54,7 @@
     <Compile Include="FeedTests.cs" />
     <Compile Include="HubTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkspaceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hubs.Framework\Hubs.Framework.csproj">

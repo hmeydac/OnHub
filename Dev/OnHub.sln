@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hubs.Framework", "Hubs.Fram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hubs.Framework.Tests", "Hubs.Framework.Tests\Hubs.Framework.Tests.csproj", "{6F1153FA-EDA7-4FB3-91C7-8FE47C76834E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{647C1E09-9E32-44C7-8EF8-168D024A1F0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnHub.UI.Web", "OnHub.UI.Web\OnHub.UI.Web.csproj", "{2B00BF8B-4615-47E8-8D1B-055EB7583550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnHub.UI.Web.Tests", "OnHub.UI.Web.Tests\OnHub.UI.Web.Tests.csproj", "{A8CD7933-523D-46A2-AAC5-1ABED3B7EB50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +37,20 @@ Global
 		{6F1153FA-EDA7-4FB3-91C7-8FE47C76834E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F1153FA-EDA7-4FB3-91C7-8FE47C76834E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F1153FA-EDA7-4FB3-91C7-8FE47C76834E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B00BF8B-4615-47E8-8D1B-055EB7583550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B00BF8B-4615-47E8-8D1B-055EB7583550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B00BF8B-4615-47E8-8D1B-055EB7583550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B00BF8B-4615-47E8-8D1B-055EB7583550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8CD7933-523D-46A2-AAC5-1ABED3B7EB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CD7933-523D-46A2-AAC5-1ABED3B7EB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CD7933-523D-46A2-AAC5-1ABED3B7EB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CD7933-523D-46A2-AAC5-1ABED3B7EB50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B00BF8B-4615-47E8-8D1B-055EB7583550} = {647C1E09-9E32-44C7-8EF8-168D024A1F0F}
+		{A8CD7933-523D-46A2-AAC5-1ABED3B7EB50} = {647C1E09-9E32-44C7-8EF8-168D024A1F0F}
 	EndGlobalSection
 EndGlobal
