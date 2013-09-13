@@ -28,7 +28,7 @@
         public Uri Uri { get; set; }
 
         public List<FeedEntry> Entries { get; set; }
-
+        
         public virtual FeedEntry LastEntry()
         {
             return this.Entries.Last();

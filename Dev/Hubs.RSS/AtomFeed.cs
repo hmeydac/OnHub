@@ -19,5 +19,11 @@
         {
             return this.Reader.GetLastEntry();
         }
+
+        public void Populate()
+        {
+            this.Entries.Clear();
+            this.Entries.AddRange(this.Reader.GetEntries());
+        }
     }
 }

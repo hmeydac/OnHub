@@ -1,6 +1,7 @@
 ﻿namespace Hubs.RSS
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     using Hubs.Framework;
@@ -40,6 +41,12 @@
         {
             var item = this.Feed.Items.First();
             return new FeedEntry(item.Title) { EntryDate = item.DatePublished, Body = item.Content };
+        }
+
+        public List<FeedEntry> GetEntries()
+        {
+            return this.Feed.Items.Select(
+                item => new FeedEntry(item.Title) { EntryDate = item.DatePublished, Body = item.Content }).ToList();
         }
 
         public bool Ping()
