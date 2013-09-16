@@ -125,6 +125,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Hubs.Framework\Hubs.Framework.csproj">
+      <Project>{E164EC6A-DEEF-42F7-811B-83AE01AAF7E8}</Project>
+      <Name>Hubs.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnHub.Web\OnHub.Web.csproj">
       <Project>{07481BAC-55B8-4E59-ADCE-F781E8E56331}</Project>
       <Name>OnHub.Web</Name>

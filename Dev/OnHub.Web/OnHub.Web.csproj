@@ -205,6 +205,7 @@
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisterExternalLoginModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\SearchFeedViewModel.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Models\WorkspaceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
