@@ -1,0 +1,23 @@
+﻿@model Hubs.UI.Web.Models.PopulateFeedViewModel
+
+@{
+    ViewBag.Title = "On Hub";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>On Hub</h2>
+<h4>Select a Feed:</h4>
+@using (Html.BeginForm("Index", "Home"))
+{
+    @Html.TextBoxFor(model => model.Url)
+    <input type="submit" value="Get Entries" />
+}
+
+@if (this.Model.Entries.Any())
+{
+    <h5>Feed Entries</h5>
+    foreach (var entry in this.Model.Entries)
+    {
+        <div><p><strong>@entry.Title</strong></p></div>
+    }
+}
