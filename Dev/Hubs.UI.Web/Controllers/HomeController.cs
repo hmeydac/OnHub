@@ -27,7 +27,7 @@
             var feed = new AtomFeed(viewModel.Url) { Reader = this.Reader };
             feed.PopulateEntries();
             var entriesViewModel = new PopulateFeedViewModel();
-            entriesViewModel.Entries.AddRange(feed.Entries.Select(entry => new FeedEntryViewModel{ Title = entry.Title}).ToList());
+            entriesViewModel.Entries.AddRange(feed.Entries.Select(entry => new FeedEntryViewModel { Title = entry.Title }).ToList());
             return this.View(entriesViewModel);
         }
     }
