@@ -13,12 +13,10 @@
 
         public AtomFeed()
         {
-            this.Id = Guid.NewGuid();
         }
 
         public AtomFeed(string url)
         {
-            this.Id = Guid.NewGuid();
             this.Locator = url;
             this.entries = new List<FeedEntry>();
         }

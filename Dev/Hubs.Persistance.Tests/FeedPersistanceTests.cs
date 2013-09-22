@@ -41,7 +41,7 @@
             var feed = catalog.AddFeed(new AtomFeed("http://mytest/"));
             Assert.IsNotNull(feed);
             Assert.AreEqual("jdoe", feed.Owner);
-            Assert.AreNotEqual(Guid.Empty, feed.Id);
+            Assert.AreEqual("http://mytest/", feed.Locator);
             Assert.AreEqual(3, catalog.GetFeeds().Count());
             Assert.AreEqual(4, this.context.Feeds.Count());
         }

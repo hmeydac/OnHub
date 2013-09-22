@@ -21,7 +21,7 @@
         public void AddAtomFeedShouldWork()
         {
             Assert.AreEqual(0, this.context.Feeds.Count());
-            var feed = new AtomFeed("http://fake.com");
+            var feed = new AtomFeed("http://fake.com") { Owner = "Me" };
             this.context.Feeds.Add(feed);
             this.context.SaveChanges();
             Assert.AreEqual(1, this.context.Feeds.Count());
