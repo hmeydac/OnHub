@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Web.Mvc;
 
+    using Hubs.Framework;
     using Hubs.RSS;
     using Hubs.UI.Web.Controllers;
     using Hubs.UI.Web.Models;

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F40F5DF3-3474-4167-8C32-473AA9FE0B01}</ProjectGuid>
+    <ProjectGuid>{8EBA742E-24C7-45EA-9BC4-0512219AA884}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hubs.RSS.Tests</RootNamespace>
-    <AssemblyName>Hubs.RSS.Tests</AssemblyName>
+    <RootNamespace>Hubs.Persistance.Tests</RootNamespace>
+    <AssemblyName>Hubs.Persistance.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -37,10 +37,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -55,21 +58,33 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AssemblyInitializer.cs" />
+    <Compile Include="AtomFeedPersistanceTests.cs" />
+    <Compile Include="FeedPersistanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AtomFeedTests.cs" />
+    <Compile Include="TransactionalUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hubs.Core\Hubs.Core.csproj">
+      <Project>{8109E3B0-3CA8-4371-8131-A67E04AB0524}</Project>
+      <Name>Hubs.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hubs.Framework\Hubs.Framework.csproj">
       <Project>{C4823AB8-D42C-45B0-BCCA-99D6E5912F1F}</Project>
       <Name>Hubs.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hubs.Persistance\Hubs.Persistance.csproj">
+      <Project>{F71C4DBA-866A-4BF1-B522-A3821F259D8C}</Project>
+      <Name>Hubs.Persistance</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hubs.RSS\Hubs.RSS.csproj">
       <Project>{11006CED-DE84-4B46-99EF-A589340E4E2D}</Project>
       <Name>Hubs.RSS</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

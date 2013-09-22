@@ -2,6 +2,8 @@
 {
     using System.Collections.Generic;
 
+    using Hubs.Framework;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Moq;
@@ -34,7 +36,7 @@
         [TestMethod]
         public void AtomFeedShouldHaveAnUrl()
         {
-            Assert.AreEqual("http://myfeed.xml/", this.feed.Url);
+            Assert.AreEqual("http://myfeed.xml/", this.feed.Locator);
         }
 
         [TestMethod]

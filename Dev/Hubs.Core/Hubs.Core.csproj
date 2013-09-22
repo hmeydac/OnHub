@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{11006CED-DE84-4B46-99EF-A589340E4E2D}</ProjectGuid>
+    <ProjectGuid>{8109E3B0-3CA8-4371-8131-A67E04AB0524}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hubs.RSS</RootNamespace>
-    <AssemblyName>Hubs.RSS</AssemblyName>
+    <RootNamespace>Hubs.Core</RootNamespace>
+    <AssemblyName>Hubs.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -32,11 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="QDFeedParser">
-      <HintPath>..\packages\qdfeed.1.0.2\lib\net35\QDFeedParser.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,19 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AtomFeed.cs" />
-    <Compile Include="AtomReader.cs" />
-    <Compile Include="IFeedReader.cs" />
+    <Compile Include="Catalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Hubs.Framework\Hubs.Framework.csproj">
-      <Project>{C4823AB8-D42C-45B0-BCCA-99D6E5912F1F}</Project>
+      <Project>{c4823ab8-d42c-45b0-bcca-99d6e5912f1f}</Project>
       <Name>Hubs.Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Hubs.Persistance\Hubs.Persistance.csproj">
+      <Project>{f71c4dba-866a-4bf1-b522-a3821f259d8c}</Project>
+      <Name>Hubs.Persistance</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

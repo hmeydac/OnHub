@@ -1,25 +1,26 @@
 ﻿namespace Hubs.RSS
 {
+    using System;
     using System.Collections.Generic;
 
-    public class AtomFeed
+    using Hubs.Framework;
+
+    public class AtomFeed : Feed
     {
         private readonly string url;
 
         private readonly List<FeedEntry> entries;
 
-        public AtomFeed(string url)
+        public AtomFeed()
         {
-            this.url = url;
-            this.entries = new List<FeedEntry>();
+            this.Id = Guid.NewGuid();
         }
 
-        public string Url
+        public AtomFeed(string url)
         {
-            get
-            {
-                return this.url;
-            }
+            this.Id = Guid.NewGuid();
+            this.Locator = url;
+            this.entries = new List<FeedEntry>();
         }
 
         public List<FeedEntry> Entries
@@ -35,7 +36,7 @@
         public void PopulateEntries()
         {
             this.entries.Clear();
-            this.entries.AddRange(this.Reader.GetEntries(this.Url));
+            this.entries.AddRange(this.Reader.GetEntries(this.Locator));
         }
 
         public bool Ping()

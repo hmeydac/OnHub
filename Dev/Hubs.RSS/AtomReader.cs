@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    using Hubs.Framework;
+
     using QDFeedParser;
 
     public class AtomReader : IFeedReader

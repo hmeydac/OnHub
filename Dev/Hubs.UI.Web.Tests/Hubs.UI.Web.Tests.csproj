@@ -112,6 +112,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Hubs.Framework\Hubs.Framework.csproj">
+      <Project>{C4823AB8-D42C-45B0-BCCA-99D6E5912F1F}</Project>
+      <Name>Hubs.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hubs.RSS\Hubs.RSS.csproj">
       <Project>{11006CED-DE84-4B46-99EF-A589340E4E2D}</Project>
       <Name>Hubs.RSS</Name>
